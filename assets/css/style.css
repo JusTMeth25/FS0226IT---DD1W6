@@ -3,6 +3,21 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-product > .border.rounded:hover {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-products {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-products:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-nav > .link:hover {
+  background-color: #fa850f;
+  border: 2px solid #fa850f;
+  border-radius: 5px;
 }
