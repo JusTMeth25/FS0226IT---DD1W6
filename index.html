@@ -27,124 +27,233 @@
 
   <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
     <div class="carousel-inner">
-      <button class="carousel-control-prev" data-bs-target="#hero" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-      <button class="carousel-control-next" data-bs-target="#hero" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-    <div class="carousel-item active">
-      <div class="bg-primary text-white text-center py-5">
-        <div class="container">
-          <h2 class="fs-1 fw-bold mb-2">Saldi di primavera<p class="fs-5 m-0">Fino al 50% di sconto sui prodotti in evidenza</p></h2>
+      <button class="carousel-control-prev" data-bs-target="#hero" data-bs-slide="prev"><span
+          class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" data-bs-target="#hero" data-bs-slide="next"><span
+          class="carousel-control-next-icon"></span></button>
+      <div class="carousel-item active">
+        <div class="bg-primary text-white text-center py-5">
+          <div class="container">
+            <h2 class="fs-1 fw-bold mb-2">Saldi di primavera<p class="fs-5 m-0">Fino al 50% di sconto sui prodotti in
+                evidenza</p>
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <div class="bg-success text-white text-center py-5">
-        <div class="container">
-          <h2 class="fs-1 fw-bold mb-2">Nuova collezione<p class="fs-5 m-0">Scopri gli arrivi della settimana</p></h2>
+      <div class="carousel-item">
+        <div class="bg-success text-white text-center py-5">
+          <div class="container">
+            <h2 class="fs-1 fw-bold mb-2">Nuova collezione<p class="fs-5 m-0">Scopri gli arrivi della settimana</p>
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <div class="bg-dark text-white text-center py-5">
-        <div class="container">
-          <h2 class="fs-1 fw-bold mb-2">Spedizione gratis<p class="fs-5 m-0">Sopra i 50 € su tutto il sito</p></h2>
+      <div class="carousel-item">
+        <div class="bg-dark text-white text-center py-5">
+          <div class="container">
+            <h2 class="fs-1 fw-bold mb-2">Spedizione gratis<p class="fs-5 m-0">Sopra i 50 € su tutto il sito</p>
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 
-    <main class="container my-4">
-      <div class="row">
+  <main class="container my-4">
+    <div class="alert alert-info alert-dismissible">Spedizione gratis sopra i 50 € <button class="btn-close"
+        data-bs-dismiss="alert"></button></div>
+    <div class="row">
 
-        <aside class="col-lg-3 d-none d-lg-block">
-          <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
-          <div class="bg-light p-3 rounded border">
-            <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
-            <p class="m-0 mb-2">Scarpe</p>
-            <p class="m-0 mb-2">T-shirt</p>
-            <p class="m-0 mb-2">Borse</p>
-            <p class="m-0 mb-2">Accessori</p>
-          </div>
-        </aside>
+      <aside class="col-lg-3 d-none d-lg-block">
+        <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
+        <div class="bg-light p-3 rounded border">
+          <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
+          <p class="m-0 mb-2">Scarpe</p>
+          <p class="m-0 mb-2">T-shirt</p>
+          <p class="m-0 mb-2">Borse</p>
+          <p class="m-0 mb-2">Accessori</p>
+        </div>
+      </aside>
 
-        <section class="col-sm-12 col-lg-9">
-          <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
-          <h2 class="fs-3 fw-bold mb-4">Prodotti in evidenza</h2>
-          <div class="row">
-            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div class="bg-secondary mb-2 rounded" style="height: 160px;">
-                  <img class="img-fluid mb-3 w-100 h-100 object-fit-cover"
-                    src="assets/img/pexels-rubenstein111rebello-6246831.jpg" alt="Immagine scarpe">
-                </div>
-                <h3 class="fs-5 fw-bold m-0">Sneaker run</h3>
-                <p class="text-muted m-0">€ 89,00</p>
+      <section class="col-sm-12 col-lg-9">
+        <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
+        <h2 class="fs-3 fw-bold mb-4">Prodotti in evidenza<span class="badge bg-danger fs-6 p-2 ms-2">-30%</span></h2>
+        <div class="row">
+          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+            <div class="card h-100 shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+                <img class="img-fluid mb-3 w-100 h-100 object-fit-cover"
+                  src="assets/img/pexels-rubenstein111rebello-6246831.jpg" alt="Immagine scarpe">
               </div>
-            </article>
-            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div class="bg-secondary mb-2 rounded" style="height: 160px;">
-                  <img class="img-fluid mb-3 w-100 h-100 object-fit-cover"
-                    src="assets/img/pexels-marsianin-18199559.jpg" alt="Immagine maglietta">
-                </div>
-                <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
-                <p class="text-muted m-0">€ 19,00</p>
+              <div class="card-body">
+                <h5 class="card-title">Sneaker run<p class="card-text text-muted">Scarpa leggera per la corsa, suola in
+                    gomma traspirante.</p>
+                  <p class="fw-bold fs-5 m-0">€89,00</p>
+                </h5>
+                <div class="card-footer bg-white border-0"><button type="button" class="btn btn-primary w-100"
+                    data-bs-toggle="modal" data-bs-target="#prodotto-1">Dettagli</button></div>
               </div>
-            </article>
-            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
-                  <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-bertoli-26903900.jpg"
-                    alt="Immagine borsa">
-                </div>
-                <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
-                <p class="text-muted m-0">€ 49,00</p>
+          </article>
+          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+            <div class="card h-100 shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+                <img class="img-fluid mb-3 w-100 h-100 object-fit-cover" src="assets/img/pexels-marsianin-18199559.jpg"
+                  alt="Immagine maglietta">
               </div>
-            </article>
-            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-              <div class="border rounded p-3 bg-white shadow-sm">
-                <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
-                  <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-irrabagon-35254141.jpg"
-                    alt="Immagine borsa">
-                </div>
-                <h3 class="fs-5 fw-bold m-0">Vinili</h3>
-                <p class="text-muted m-0">A partire da € 39,00</p>
+              <div class="card-body">
+                <h5 class="card-title">T-shirt basic<p class="card-text text-muted">Cotone biologico, taglio regolare,
+                    disponibile in 5 colori.</p>
+                  <p class="fw-bold fs-5 m-0">€19,00</p>
+                </h5>
+                <div class="card-footer bg-white border-0"><button type="button" class="btn btn-primary w-100"
+                    data-bs-toggle="modal" data-bs-target="#prodotto-2">Dettagli</button></div>
               </div>
-            </article>
-          </div>
-        </section>
+          </article>
+          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+            <div class="card h-100 shadow-sm">
+              <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
+                <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-bertoli-26903900.jpg"
+                  alt="Immagine borsa">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Borsa city<p class="card-text text-muted">Tessuto resistente, tasca interna,
+                    cinghia regolabile.</p>
+                  <p class="fw-bold fs-5 m-0">€49,00</p>
+                </h5>
+                <div class="card-footer bg-white border-0"><button type="button" class="btn btn btn-primary w-100"
+                    data-bs-toggle="modal" data-bs-target="#prodotto-3">Dettagli</button></div>
+              </div>
+          </article>
+          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+            <div class="card h-100 shadow-sm">
+              <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
+                <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-irrabagon-35254141.jpg"
+                  alt="Immagine vinile">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Vinili da collezione<p class="card-text text-muted">Tanti vinili da collezione
+                    tra cui scegliere, non lasciarteli sfuggire.</p>
+                  <p class="fw-bold fs-5 m-0">€59,00</p>
+                </h5>
+                <div class="card-footer bg-white border-0"><button type="button" class="btn btn-primary w-100"
+                    data-bs-toggle="modal" data-bs-target="#prodotto-4">Dettagli</button></div>
+              </div>
+          </article>
+        </div>
+      </section>
 
+    </div>
+  </main>
+  <div class="modal fade" id="prodotto-1" tabindex="-1" aria-labelledby="prodotto-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </h5>
+        </div>
+        <div class="modal-body">
+          <img src="assets/img/pexels-rubenstein111rebello-6246831.jpg" alt="Immagine scarpe" class="img-fluid mb-3">
+          <p>Scarpa leggera per la corsa, suola in gomma traspirante.</p>
+          <p class="fw-bold fs-4 m-0">€89,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
       </div>
-    </main>
-
-    <footer class="bg-dark text-white py-4 mt-5">
-      <!-- Footer scuro centrato con copyright -->
-      <div class="container text-center">
-        <p class="m-0">© 2026 EpiShop — Tutti i diritti riservati</p>
+    </div>
+  </div>
+  <div class="modal fade" id="prodotto-2" tabindex="-1" aria-labelledby="prodotto-2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </h5>
+        </div>
+        <div class="modal-body">
+          <img src="/assets/img/pexels-marsianin-18199559.jpg" alt="Immagine maglietta" class="img-fluid mb-3">
+          <p>Cotone biologico, taglio regolare, disponibile in 5 colori.</p>
+          <p class="fw-bold fs-4 m-0">€19,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
       </div>
-      <div class="row text-center p-4">
-        <div class="col-md-4">
-          <h3 class="fs-5 fw-bold mb-3">Contatti</h3>
-          <p class="m-0 mb-2">Via EpiShop, 123</p>
-          <p class="m-0 mb-2">Milano, Italia</p>
-          <p class="m-0 mb-2">info@epishop.it</p>
+    </div>
+  </div>
+  <div class="modal fade" id="prodotto-3" tabindex="-1" aria-labelledby="prodotto-2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </h5>
         </div>
-        <div class="col-md-4">
-          <h3 class="fs-5 fw-bold mb-3">Social</h3>
-          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Facebook</a></p>
-          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Instagram</a></p>
-          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Twitter</a></p>
+        <div class="modal-body">
+          <img src="assets/img/pexels-bertoli-26903900.jpg" alt="Immagine borsa" class="img-fluid mb-3">
+          <p>Tessuto resistente, tasca interna, cinghia regolabile.</p>
+          <p class="fw-bold fs-4 m-0">€49,00</p>
         </div>
-        <div class="col-md-4">
-          <h3 class="fs-5 fw-bold mb-3">Link</h3>
-          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Home</a></p>
-          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Prodotti</a></p>
-          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Contatti</a></p>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="prodotto-4" tabindex="-1" aria-labelledby="prodotto-2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </h5>
+        </div>
+        <div class="modal-body">
+          <img src="assets/img/pexels-irrabagon-35254141.jpg" alt="Immagine borsa" class="img-fluid mb-3">
+          <p>Tanti vinili da collezione tra cui scegliere, non lasciarteli sfuggire.</p>
+          <p class="fw-bold fs-4 m-0">€59,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-4 mt-5">
+    <!-- Footer scuro centrato con copyright -->
+    <div class="container text-center">
+      <p class="m-0">© 2026 EpiShop — Tutti i diritti riservati</p>
+    </div>
+    <div class="row text-center p-4">
+      <div class="col-md-4">
+        <h3 class="fs-5 fw-bold mb-3">Contatti</h3>
+        <p class="m-0 mb-2">Via EpiShop, 123</p>
+        <p class="m-0 mb-2">Milano, Italia</p>
+        <p class="m-0 mb-2">info@epishop.it</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fs-5 fw-bold mb-3">Social</h3>
+        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Facebook</a></p>
+        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Instagram</a></p>
+        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Twitter</a></p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fs-5 fw-bold mb-3">Link</h3>
+        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Home</a></p>
+        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Prodotti</a></p>
+        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Contatti</a></p>
+      </div>
+  </footer>
   </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
