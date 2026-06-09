@@ -11,121 +11,140 @@
 
 <body>
 
-  <header class="bg-primary text-white py-3">
-    <!-- Logo a sinistra, link nav a destra. Usa container + d-flex + justify-content-between -->
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="fs-3 m-0">EpiShop</h1>
-      <nav class="menu-nav">
-        <a class="text-white text-decoration-none mx-2 link" href="#">Prodotti</a>
-        <a class="text-white text-decoration-none mx-2 link" href="#">Offerte</a>
-        <a class="text-white text-decoration-none mx-2 d-none d-md-inline link" href="#">Contatti</a>
-        <a class="text-white text-decoration-none mx-2 d-none d-lg-inline link" href="#">Account</a>
-      </nav>
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">EpiShop</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-menu"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav-menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Prodotti</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Offerte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <section class="bg-light py-5">
-    <!-- Hero: titolo grande, sottotitolo, bottone CTA. Usa container + text-center + classi utility -->
-    <div class="container text-center">
-      <h2 class="fs-1 fw-bold mb-3">Saldi di primavera</h2>
-      <p class="fs-5 text-muted mb-4">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto.</p>
-      <a class="d-inline-block bg-primary text-white text-decoration-none py-2 px-4 rounded btn-products" href="#">Vedi i
-        prodotti</a>
-    </div>
-  </section>
-
-  <main class="container my-4">
-    <div class="row">
-
-      <aside class="col-lg-3 d-none d-lg-block">
-        <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
-        <div class="bg-light p-3 rounded border">
-          <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
-          <p class="m-0 mb-2">Scarpe</p>
-          <p class="m-0 mb-2">T-shirt</p>
-          <p class="m-0 mb-2">Borse</p>
-          <p class="m-0 mb-2">Accessori</p>
+  <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+    <div class="carousel-inner">
+      <button class="carousel-control-prev" data-bs-target="#hero" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" data-bs-target="#hero" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    <div class="carousel-item active">
+      <div class="bg-primary text-white text-center py-5">
+        <div class="container">
+          <h2 class="fs-1 fw-bold mb-2">Saldi di primavera<p class="fs-5 m-0">Fino al 50% di sconto sui prodotti in evidenza</p></h2>
         </div>
-      </aside>
-
-      <section class="col-sm-12 col-lg-9">
-        <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
-        <h2 class="fs-3 fw-bold mb-4">Prodotti in evidenza</h2>
-        <div class="row">
-          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-            <div class="border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
-                <img class="img-fluid mb-3 w-100 h-100 object-fit-cover"
-                  src="assets/img/pexels-rubenstein111rebello-6246831.jpg" alt="Immagine scarpe">
-              </div>
-              <h3 class="fs-5 fw-bold m-0">Sneaker run</h3>
-              <p class="text-muted m-0">€ 89,00</p>
-            </div>
-          </article>
-          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-            <div class="border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded" style="height: 160px;">
-                <img class="img-fluid mb-3 w-100 h-100 object-fit-cover" src="assets/img/pexels-marsianin-18199559.jpg"
-                  alt="Immagine maglietta">
-              </div>
-              <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
-              <p class="text-muted m-0">€ 19,00</p>
-            </div>
-          </article>
-          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-            <div class="border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
-                <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-bertoli-26903900.jpg"
-                  alt="Immagine borsa">
-              </div>
-              <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
-              <p class="text-muted m-0">€ 49,00</p>
-            </div>
-          </article>
-          <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
-            <div class="border rounded p-3 bg-white shadow-sm">
-              <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
-                <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-irrabagon-35254141.jpg"
-                  alt="Immagine borsa">
-              </div>
-              <h3 class="fs-5 fw-bold m-0">Vinili</h3>
-              <p class="text-muted m-0">A partire da € 39,00</p>
-            </div>
-          </article>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="bg-success text-white text-center py-5">
+        <div class="container">
+          <h2 class="fs-1 fw-bold mb-2">Nuova collezione<p class="fs-5 m-0">Scopri gli arrivi della settimana</p></h2>
         </div>
-      </section>
-
+      </div>
     </div>
-  </main>
-
-  <footer class="bg-dark text-white py-4 mt-5">
-    <!-- Footer scuro centrato con copyright -->
-    <div class="container text-center">
-      <p class="m-0">© 2026 EpiShop — Tutti i diritti riservati</p>
+    <div class="carousel-item">
+      <div class="bg-dark text-white text-center py-5">
+        <div class="container">
+          <h2 class="fs-1 fw-bold mb-2">Spedizione gratis<p class="fs-5 m-0">Sopra i 50 € su tutto il sito</p></h2>
+        </div>
+      </div>
     </div>
-    <div class="row text-center p-4">
-      <div class="col-md-4">
-        <h3 class="fs-5 fw-bold mb-3">Contatti</h3>
-        <p class="m-0 mb-2">Via EpiShop, 123</p>
-        <p class="m-0 mb-2">Milano, Italia</p>
-        <p class="m-0 mb-2">info@epishop.it</p>
+    </div>
+  </div>
+
+    <main class="container my-4">
+      <div class="row">
+
+        <aside class="col-lg-3 d-none d-lg-block">
+          <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
+          <div class="bg-light p-3 rounded border">
+            <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
+            <p class="m-0 mb-2">Scarpe</p>
+            <p class="m-0 mb-2">T-shirt</p>
+            <p class="m-0 mb-2">Borse</p>
+            <p class="m-0 mb-2">Accessori</p>
+          </div>
+        </aside>
+
+        <section class="col-sm-12 col-lg-9">
+          <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
+          <h2 class="fs-3 fw-bold mb-4">Prodotti in evidenza</h2>
+          <div class="row">
+            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+              <div class="border rounded p-3 bg-white shadow-sm">
+                <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+                  <img class="img-fluid mb-3 w-100 h-100 object-fit-cover"
+                    src="assets/img/pexels-rubenstein111rebello-6246831.jpg" alt="Immagine scarpe">
+                </div>
+                <h3 class="fs-5 fw-bold m-0">Sneaker run</h3>
+                <p class="text-muted m-0">€ 89,00</p>
+              </div>
+            </article>
+            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+              <div class="border rounded p-3 bg-white shadow-sm">
+                <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+                  <img class="img-fluid mb-3 w-100 h-100 object-fit-cover"
+                    src="assets/img/pexels-marsianin-18199559.jpg" alt="Immagine maglietta">
+                </div>
+                <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
+                <p class="text-muted m-0">€ 19,00</p>
+              </div>
+            </article>
+            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+              <div class="border rounded p-3 bg-white shadow-sm">
+                <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
+                  <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-bertoli-26903900.jpg"
+                    alt="Immagine borsa">
+                </div>
+                <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
+                <p class="text-muted m-0">€ 49,00</p>
+              </div>
+            </article>
+            <article class="col-sm-12 col-md-6 col-xl-3 col-xxl-3 mb-3 card-product">
+              <div class="border rounded p-3 bg-white shadow-sm">
+                <div class="bg-secondary mb-2 rounded text-center" style="height: 160px;">
+                  <img class="img-fluid w-100 h-100 object-fit-cover" src="assets/img/pexels-irrabagon-35254141.jpg"
+                    alt="Immagine borsa">
+                </div>
+                <h3 class="fs-5 fw-bold m-0">Vinili</h3>
+                <p class="text-muted m-0">A partire da € 39,00</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
       </div>
-      <div class="col-md-4">
-        <h3 class="fs-5 fw-bold mb-3">Social</h3>
-        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Facebook</a></p>
-        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Instagram</a></p>
-        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Twitter</a></p>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+      <!-- Footer scuro centrato con copyright -->
+      <div class="container text-center">
+        <p class="m-0">© 2026 EpiShop — Tutti i diritti riservati</p>
       </div>
-      <div class="col-md-4">
-        <h3 class="fs-5 fw-bold mb-3">Link</h3>
-        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Home</a></p>
-        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Prodotti</a></p>
-        <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Contatti</a></p>
-      </div>
-  </footer>
+      <div class="row text-center p-4">
+        <div class="col-md-4">
+          <h3 class="fs-5 fw-bold mb-3">Contatti</h3>
+          <p class="m-0 mb-2">Via EpiShop, 123</p>
+          <p class="m-0 mb-2">Milano, Italia</p>
+          <p class="m-0 mb-2">info@epishop.it</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="fs-5 fw-bold mb-3">Social</h3>
+          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Facebook</a></p>
+          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Instagram</a></p>
+          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Twitter</a></p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="fs-5 fw-bold mb-3">Link</h3>
+          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Home</a></p>
+          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Prodotti</a></p>
+          <p class="m-0 mb-2"><a class="text-white text-decoration-none" href="#">Contatti</a></p>
+        </div>
+    </footer>
   </div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
