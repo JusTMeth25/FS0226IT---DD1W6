@@ -1,23 +1,74 @@
-.card-product > .border.rounded {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card-product > .border.rounded:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+body {
+  background-color: #fafafa;
+  color: #1a1a1a;
 }
 
-.btn-products {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card {
+  background-color: #ffffff;
+  border-color: #e0e0e0;
 }
-.btn-products:hover {
+
+.card .card-text {
+  color: #6c757d;
+}
+
+.card-footer {
+  background-color: #ffffff;
+}
+
+aside .bg-ligth {
+  background-color: #ffffff !important;
+  border-color: #e0e0e0;
+  color: #1a1a1a;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+body {
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark .card {
+  background-color: #1e1e1e;
+  border-color: #333333;
+}
+body.dark .card .card-text {
+  color: #aaaaaa;
+}
+body.dark .card-footer {
+  background-color: #1e1e1e;
+}
+body.dark aside .bg-light {
+  background-color: #1e1e1e !important;
+  border-color: #333333;
+  color: #e0e0e0;
+}
+body.dark .modal-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+body.dark .navbar {
+  background-color: rgb(1.5532786885, 76.887295082, 187.9467213115) !important;
+}
+
+.card {
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.card:hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.095);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card .card-title {
+  font-weight: bold;
 }
 
-.menu-nav > .link:hover {
-  background-color: #fa850f;
-  border: 2px solid #fa850f;
-  border-radius: 5px;
-}
+/*# sourceMappingURL=style.css.map */

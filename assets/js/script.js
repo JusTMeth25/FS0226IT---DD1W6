@@ -140,3 +140,10 @@ prodotti.forEach((prodotto) => {
 
   document.body.appendChild(modal);
 });
+
+document.getElementById("toggle-tema").addEventListener("click", function () {
+  document.body.classList.toggle("dark");
+  this.textContent = document.body.classList.contains("dark")
+    ? "Tema chiaro"
+    : "Tema scuro";
+});

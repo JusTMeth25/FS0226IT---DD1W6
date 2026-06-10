@@ -1,0 +1,88 @@
+$brand-primary: #0d6efd;
+$brand-primary-dark: darken($brand-primary, 15%);
+$radius-base: 0.25rem;
+$shadow-card: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$shadow-card-hover: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.095);
+
+@mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
+  body {
+    background-color: $bg;
+    color: $testo;
+  }
+  .card {
+    background-color: $card-bg;
+    border-color: $bordo;
+  }
+ .card .card-text {
+    color: $muted;
+  }
+  .card-footer {
+    background-color: $card-bg;
+  }
+  aside .bg-ligth {
+    background-color: $card-bg !important;
+    border-color: $bordo;
+    color: $testo;
+  }
+  .modal-content {
+    background-color: $card-bg;
+    color: $testo;
+  }
+}
+
+@include tema(
+  $bg: #fafafa,
+  $testo: #1a1a1a,
+  $card-bg: #ffffff,
+  $bordo: #e0e0e0,
+  $muted: #6c757d
+);
+
+body {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+
+  .card {
+    background-color: #1e1e1e;
+    border-color: #333333;
+  }
+  .card .card-text {
+    color: #aaaaaa;
+  }
+  .card-footer {
+    background-color: #1e1e1e;
+  }
+  aside .bg-light {
+    background-color: #1e1e1e !important;
+    border-color: #333333;
+    color: #e0e0e0;
+  }
+  .modal-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  .navbar {
+    background-color: $brand-primary-dark !important;
+  }
+}
+
+.card {
+  border-radius: $radius-base;
+  box-shadow: $shadow-card;
+  transition:
+    box-shadow 200ms ease,
+    transform 200ms ease;
+  &:hover {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-3px);
+  }
+  .card-title {
+    font-weight: bold;
+  }
+}
