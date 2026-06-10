@@ -478,7 +478,7 @@ gantt
 
 ## Licenza
 
-Non determinabile dal codice analizzato. Nessun file `LICENSE` presente nel repository.
+[MIT](LICENSE)
 
 ---
 
