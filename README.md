@@ -478,7 +478,7 @@ gantt
 
 ## Licenza
 
-[MIT](LICENSE)
+2026 - Epicode
 
 ---
 
