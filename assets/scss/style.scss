@@ -1,8 +1,4 @@
-$brand-primary: #0d6efd;
-$brand-primary-dark: darken($brand-primary, 15%);
-$radius-base: 0.25rem;
-$shadow-card: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-$shadow-card-hover: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.095);
+@use "partials/variables" as v;
 
 @mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
   body {
@@ -12,8 +8,11 @@ $shadow-card-hover: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.095);
   .card {
     background-color: $card-bg;
     border-color: $bordo;
+    @include solo-su(768px) {
+      padding: 24px;
+    }
   }
- .card .card-text {
+  .card .card-text {
     color: $muted;
   }
   .card-footer {
@@ -27,6 +26,12 @@ $shadow-card-hover: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.095);
   .modal-content {
     background-color: $card-bg;
     color: $testo;
+  }
+}
+
+@mixin solo-su($bp) {
+  @media (min-width: $bp) {
+    @content;
   }
 }
 
@@ -68,18 +73,18 @@ body.dark {
     color: #e0e0e0;
   }
   .navbar {
-    background-color: $brand-primary-dark !important;
+    background-color: v.$brand-primary-dark !important;
   }
 }
 
 .card {
-  border-radius: $radius-base;
-  box-shadow: $shadow-card;
+  border-radius: v.$radius-base;
+  box-shadow: v.$shadow-card;
   transition:
     box-shadow 200ms ease,
     transform 200ms ease;
   &:hover {
-    box-shadow: $shadow-card-hover;
+    box-shadow: v.$shadow-card-hover;
     transform: translateY(-3px);
   }
   .card-title {
