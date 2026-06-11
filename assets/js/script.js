@@ -170,6 +170,23 @@ document.getElementById("toggle-tema").addEventListener("click", function () {
     : "Tema scuro";
 });
 
+/**
+ * Renderizza una lista di prodotti all'interno del contenitore dedicato.
+ *
+ * Per ogni prodotto genera una card Bootstrap con immagine, nome, descrizione,
+ * prezzo e un bottone che apre il modal di dettaglio corrispondente.
+ * Aggiorna inoltre il contatore visibile con il numero di prodotti mostrati.
+ *
+ * @param {Object[]} lista - Array di oggetti prodotto da visualizzare.
+ * @param {number}   lista[].id          - Identificatore univoco del prodotto.
+ * @param {string}   lista[].nome        - Nome del prodotto.
+ * @param {string}   lista[].descrizione - Descrizione breve del prodotto.
+ * @param {string}   lista[].prezzo      - Prezzo formattato (es. "€89").
+ * @param {string}   lista[].immagine    - Percorso dell'immagine del prodotto.
+ * @param {string}   lista[].alt         - Testo alternativo per l'immagine.
+ * @param {string}   lista[].categoria   - Categoria di appartenenza del prodotto.
+ * @returns {void}
+ */
 function renderProdotti(lista) {
   document.getElementById("contenitore-prodotti").innerHTML = lista
     .map(
@@ -195,7 +212,21 @@ function renderProdotti(lista) {
   document.getElementById("contatore").textContent = lista.length;
 }
 
-const filtri = document.getElementById("filtri");
+/**
+ * Listener delegato sul contenitore dei bottoni filtro (#filtri).
+ *
+ * Intercetta i click su qualsiasi bottone figlio che possiede l'attributo
+ * `data-categoria`. Quando un bottone viene premuto:
+ *  - rimuove la classe `active` da tutti i bottoni del gruppo;
+ *  - aggiunge `active` al bottone cliccato;
+ *  - filtra l'array `prodotti` in base alla categoria selezionata
+ *    (il valore speciale "tutti" mostra l'intera lista);
+ *  - chiama {@link renderProdotti} con la lista filtrata.
+ *
+ * @listens click
+ * @param {MouseEvent} event - Evento di click propagato fino al contenitore.
+ * @returns {void}
+ */
 filtri.addEventListener("click", function (event) {
   const bottone = event.target.closest("[data-categoria]");
   if (!bottone) {
