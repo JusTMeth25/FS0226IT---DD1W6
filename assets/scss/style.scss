@@ -46,9 +46,7 @@ $brand-primary: hsl(150, 60%, 30%);
 );
 
 @mixin card-prodotto($accent) {
-  .card {
-    border-top: 4px solid $accent;
-  }
+  border-top: 4px solid $accent;
   .card-title {
     color: $accent;
   }
@@ -68,6 +66,10 @@ $brand-primary: hsl(150, 60%, 30%);
   @include card-prodotto(hsl(45, 90%, 50%));
 }
 
+.card.musica {
+  @include card-prodotto(hsl(150, 60%, 30%));
+}
+
 body {
   transition:
     background-color 200ms ease,
@@ -83,7 +85,7 @@ body.dark {
     border-color: #333333;
   }
   .card .card-text {
-    color: #aaaaaa;
+    color: #e0e0e0 !important;
   }
   .card-footer {
     background-color: #1e1e1e;
@@ -99,6 +101,29 @@ body.dark {
   }
   .navbar {
     background-color: v.$brand-primary-dark !important;
+  }
+  .prezzo {
+    color: #e0e0e0 !important;
+  }
+  .contatore {
+    color: #e0e0e0 !important;
+  }
+  .card.scarpe {
+    @include card-prodotto(hsl(220, 60%, 40%));
+  }
+  .mostrati {
+    color: #e0e0e0 !important;
+  }
+  .card.abbigliamento {
+    @include card-prodotto(hsl(0, 70%, 50%));
+  }
+
+  .card.accessori {
+    @include card-prodotto(hsl(45, 90%, 50%));
+  }
+
+  .card.musica {
+    @include card-prodotto(hsl(150, 60%, 30%));
   }
 }
 

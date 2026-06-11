@@ -62,7 +62,7 @@ const prodotti = [
     nome: "Cappello sport",
     descrizione: "Visiera regolabile, traspirante, ideale per gli allenamenti.",
     prezzo: "€14",
-    immagine: "assets/img/pexels-irrabagon-35254141.jpg",
+    immagine: "/assets/img/pexels-cesar-o-neill-26650613-33111376.jpg",
     alt: "Immagine cappello",
     categoria: "accessori",
   },
@@ -71,7 +71,7 @@ const prodotti = [
     nome: "Felpa con cappuccio",
     descrizione: "Tessuto morbido, tasca e marsupio, polsini elasticizzati.",
     prezzo: "€59",
-    immagine: "assets/img/pexels-irrabagon-35254141.jpg",
+    immagine: "/assets/img/pexels-ana-maria-arroyave-1851916642-28701959.jpg",
     alt: "Immagine vinile",
     categoria: "abbigliamento",
   },
@@ -171,14 +171,28 @@ document.getElementById("toggle-tema").addEventListener("click", function () {
 });
 
 function renderProdotti(lista) {
-  lista
+  document.getElementById("contenitore-prodotti").innerHTML = lista
     .map(
-      (p) =>
-        "<article class='col-12 col-sm-6 col-xl-4 mb-3'><div class='card h-100 ${p.categoria}'><div class='bg-secondary mb-2 rounded' style='height: 160px;'><img class='card-img-top' src='${p.img}' alt='${p.alt}'></div><div class='card-body'><h5 class='card-title'>${p.nome}<p class='card-text'>${p.descrizione}</p><p class='fw-bold fs-5 m-0'>${p.prezzo}</p></h5></div></div></article>}'",
+      (
+        p,
+      ) => `<article class="col-sm-12 col-md-6 col-xl-4 col-xxl-4 mb-3 card-product"> <div class="card h-100 shadow-sm ${p.categoria}">
+    <div class="bg-secondary mb-2 rounded" style="height: 160px;">
+    <img class="img-fluid mb-3 w-100 h-100 object-fit-cover" src="${p.immagine}" alt="${p.alt}">
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">${p.nome}</h5>
+    <p class="card-text text-muted">${p.descrizione}</p>
+    <p class="fw-bold fs-5 m-0 prezzo">${p.prezzo}</p>
+    </div>
+    <div class="card-footer border-0">
+    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#prodotto-${p.id}">Dettagli</button>
+    </div>
+    </div>
+    </article>
+    `,
     )
     .join("");
-
-  document.getElementById("contenitore-prodotti").innerHTML;
+  document.getElementById("contatore").textContent = lista.length;
 }
 
 const filtri = document.getElementById("filtri");
@@ -189,6 +203,17 @@ filtri.addEventListener("click", function (event) {
   }
   filtri.querySelectorAll(".btn").forEach((b) => b.classList.remove("active"));
   bottone.classList.add("active");
+  const categoria = bottone.dataset.categoria;
+  const filtrati =
+    categoria === "tutti"
+      ? prodotti
+      : prodotti.filter((p) => p.categoria === categoria);
+
+  renderProdotti(filtrati);
 });
 
+function calcolaTotale(lista) {
+  return lista.reduce((tot, p) => tot + p.prezzo, 0);
+}
+calcolaTotale(prodotti);
 renderProdotti(prodotti);

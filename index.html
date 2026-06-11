@@ -51,13 +51,15 @@
       <section class="col-sm-12 col-lg-9">
         <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
         <h2 class="fs-3 fw-bold mb-4">Prodotti in evidenza<span class="badge bg-danger fs-6 p-2 ms-2">-30%</span></h2>
-          <div id="filtri" class="mb-4">
-      <button type="button" class="btn btn-outline-primary me-2 mb-2 active" data-categoria="tutti">Tutti</button>
-      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="scarpe">Scarpe</button>
-      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="abbigliamento">Abbigliamento</button>
-      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="accessori">Accessori</button>
-      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="musica">Musica</button>
-    </div>
+        <p class="text-muted m-0 mostrati">Mostrati: <span id="contatore">6</span> su 6</p>
+        <div id="filtri" class="mb-4">
+          <button type="button" class="btn btn-outline-primary me-2 mb-2 active" data-categoria="tutti">Tutti</button>
+          <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="scarpe">Scarpe</button>
+          <button type="button" class="btn btn-outline-primary me-2 mb-2"
+            data-categoria="abbigliamento">Abbigliamento</button>
+          <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="accessori">Accessori</button>
+          <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="musica">Musica</button>
+        </div>
         <div id="contenitore-prodotti" class="row"><!--popolato da JS -->
         </div>
       </section>

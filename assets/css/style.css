@@ -32,7 +32,7 @@ aside .bg-ligth {
   color: #1a1a1a;
 }
 
-.card.scarpe .card {
+.card.scarpe {
   border-top: 4px solid hsl(220, 60%, 40%);
 }
 .card.scarpe .card-title {
@@ -42,7 +42,7 @@ aside .bg-ligth {
   box-shadow: 0 6px 18px rgba(40.8, 81.6, 163.2, 0.3);
 }
 
-.card.abbigliamento .card {
+.card.abbigliamento {
   border-top: 4px solid hsl(0, 70%, 50%);
 }
 .card.abbigliamento .card-title {
@@ -52,7 +52,7 @@ aside .bg-ligth {
   box-shadow: 0 6px 18px rgba(216.75, 38.25, 38.25, 0.3);
 }
 
-.card.accessori .card {
+.card.accessori {
   border-top: 4px solid hsl(45, 90%, 50%);
 }
 .card.accessori .card-title {
@@ -60,6 +60,16 @@ aside .bg-ligth {
 }
 .card.accessori:hover {
   box-shadow: 0 6px 18px rgba(242.25, 184.875, 12.75, 0.3);
+}
+
+.card.musica {
+  border-top: 4px solid hsl(150, 60%, 30%);
+}
+.card.musica .card-title {
+  color: hsl(150, 60%, 30%);
+}
+.card.musica:hover {
+  box-shadow: 0 6px 18px rgba(30.6, 122.4, 76.5, 0.3);
 }
 
 body {
@@ -75,7 +85,7 @@ body.dark .card {
   border-color: #333333;
 }
 body.dark .card .card-text {
-  color: #aaaaaa;
+  color: #e0e0e0 !important;
 }
 body.dark .card-footer {
   background-color: #1e1e1e;
@@ -91,6 +101,51 @@ body.dark .modal-content {
 }
 body.dark .navbar {
   background-color: rgb(1.5532786885, 76.887295082, 187.9467213115) !important;
+}
+body.dark .prezzo {
+  color: #e0e0e0 !important;
+}
+body.dark .contatore {
+  color: #e0e0e0 !important;
+}
+body.dark .card.scarpe {
+  border-top: 4px solid hsl(220, 60%, 40%);
+}
+body.dark .card.scarpe .card-title {
+  color: hsl(220, 60%, 40%);
+}
+body.dark .card.scarpe:hover {
+  box-shadow: 0 6px 18px rgba(40.8, 81.6, 163.2, 0.3);
+}
+body.dark .mostrati {
+  color: #e0e0e0 !important;
+}
+body.dark .card.abbigliamento {
+  border-top: 4px solid hsl(0, 70%, 50%);
+}
+body.dark .card.abbigliamento .card-title {
+  color: hsl(0, 70%, 50%);
+}
+body.dark .card.abbigliamento:hover {
+  box-shadow: 0 6px 18px rgba(216.75, 38.25, 38.25, 0.3);
+}
+body.dark .card.accessori {
+  border-top: 4px solid hsl(45, 90%, 50%);
+}
+body.dark .card.accessori .card-title {
+  color: hsl(45, 90%, 50%);
+}
+body.dark .card.accessori:hover {
+  box-shadow: 0 6px 18px rgba(242.25, 184.875, 12.75, 0.3);
+}
+body.dark .card.musica {
+  border-top: 4px solid hsl(150, 60%, 30%);
+}
+body.dark .card.musica .card-title {
+  color: hsl(150, 60%, 30%);
+}
+body.dark .card.musica:hover {
+  box-shadow: 0 6px 18px rgba(30.6, 122.4, 76.5, 0.3);
 }
 
 .card {
