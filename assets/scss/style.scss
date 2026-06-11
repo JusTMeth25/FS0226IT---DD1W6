@@ -1,5 +1,7 @@
 @use "partials/variables" as v;
 
+$brand-primary: hsl(150, 60%, 30%);
+
 @mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
   body {
     background-color: $bg;
@@ -42,6 +44,22 @@
   $bordo: #e0e0e0,
   $muted: #6c757d
 );
+
+@mixin card-prodotto($accent) {
+  .card {
+    border-top: 4px solid $accent;
+  }
+  .card-title {
+    color: $accent;
+  }
+  &:hover {
+    box-shadow: 0 6px 18px rgba($accent, 0.3);
+  }
+}
+
+@include card-prodotto($accent) {
+  
+}
 
 body {
   transition:
@@ -89,5 +107,30 @@ body.dark {
   }
   .card-title {
     font-weight: bold;
+  }
+}
+
+.btn-primary,
+.bg-primary,
+.navbar .bg-primary {
+  background-color: $brand-primary !important;
+  border-color: $brand-primary !important;
+}
+
+.text-primary {
+  color: $brand-primary !important;
+}
+
+.btn-primary:hover {
+  background-color: darken($brand-primary, 10%) !important;
+}
+
+.btn-outline-primary {
+  color: $brand-primary !important;
+  border-color: $brand-primary !important;
+  &:hover,
+  &.active {
+    background-color: $brand-primary !important;
+    border-color: $brand-primary !important;
   }
 }
