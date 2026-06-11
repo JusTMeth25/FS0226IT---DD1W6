@@ -24,34 +24,56 @@ const prodotti = [
     id: 1,
     nome: "Sneaker run",
     descrizione: "Scarpa leggera per la corsa, suola in gomma traspirante.",
-    prezzo: "€89,00",
+    prezzo: "€89",
     immagine: "assets/img/pexels-rubenstein111rebello-6246831.jpg",
     alt: "Immagine scarpe",
+    categoria: "scarpe",
   },
   {
     id: 2,
     nome: "T-shirt basic",
     descrizione: "Cotone biologico, taglio regolare, disponibile in 5 colori.",
-    prezzo: "€19,00",
+    prezzo: "€19",
     immagine: "assets/img/pexels-marsianin-18199559.jpg",
     alt: "Immagine maglietta",
+    categoria: "abbigliamento",
   },
   {
     id: 3,
     nome: "Borsa city",
     descrizione: "Tessuto resistente, tasca interna, cinghia regolabile.",
-    prezzo: "€49,00",
+    prezzo: "€49",
     immagine: "assets/img/pexels-bertoli-26903900.jpg",
     alt: "Immagine borsa",
+    categoria: "accessori",
   },
   {
     id: 4,
     nome: "Vinili da collezione",
     descrizione:
       "Tanti vinili da collezione tra cui scegliere, non lasciarteli sfuggire.",
-    prezzo: "€59,00",
+    prezzo: "€59",
     immagine: "assets/img/pexels-irrabagon-35254141.jpg",
     alt: "Immagine vinile",
+    categoria: "musica",
+  },
+  {
+    id: 5,
+    nome: "Cappello sport",
+    descrizione: "Visiera regolabile, traspirante, ideale per gli allenamenti.",
+    prezzo: "€14",
+    immagine: "assets/img/pexels-irrabagon-35254141.jpg",
+    alt: "Immagine cappello",
+    categoria: "accessori",
+  },
+  {
+    id: 6,
+    nome: "Felpa con cappuccio",
+    descrizione: "Tessuto morbido, tasca e marsupio, polsini elasticizzati.",
+    prezzo: "€59",
+    immagine: "assets/img/pexels-irrabagon-35254141.jpg",
+    alt: "Immagine vinile",
+    categoria: "abbigliamento",
   },
 ];
 prodotti.sort(() => Math.random() - 0.5);
@@ -147,3 +169,14 @@ document.getElementById("toggle-tema").addEventListener("click", function () {
     ? "Tema chiaro"
     : "Tema scuro";
 });
+
+function renderProdotti(lista) {
+  lista
+    .map(
+      (p) =>
+        "<article class='col-12 col-sm-6 col-xl-4 mb-3'><div class='card h-100 ${p.categoria}'><div class='bg-secondary mb-2 rounded' style='height: 160px;'><img class='card-img-top' src='${p.img}' alt='${p.alt}'></div><div class='card-body'><h5 class='card-title'>${p.nome}<p class='card-text'>${p.descrizione}</p><p class='fw-bold fs-5 m-0'>${p.prezzo}</p></h5></div></div></article>}'",
+    )
+    .join("");
+
+  document.getElementById("contenitore-prodotti").innerHTML;
+}

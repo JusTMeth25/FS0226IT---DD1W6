@@ -56,9 +56,16 @@ $brand-primary: hsl(150, 60%, 30%);
     box-shadow: 0 6px 18px rgba($accent, 0.3);
   }
 }
+.card.scarpe {
+  @include card-prodotto(hsl(220, 60%, 40%));
+}
 
-@include card-prodotto($accent) {
-  
+.card.abbigliamento {
+  @include card-prodotto(hsl(0, 70%, 50%));
+}
+
+.card.accessori {
+  @include card-prodotto(hsl(45, 90%, 50%));
 }
 
 body {
