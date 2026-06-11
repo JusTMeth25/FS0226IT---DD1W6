@@ -34,12 +34,10 @@
           class="carousel-control-next-icon"></span></button>
     </div>
   </div>
-
   <main class="container my-4">
     <div class="alert alert-info alert-dismissible">Spedizione gratis sopra i 50 € <button class="btn-close"
         data-bs-dismiss="alert"></button></div>
     <div class="row">
-
       <aside class="col-lg-3 d-none d-lg-block">
         <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
         <div class="bg-light p-3 rounded border">
@@ -50,11 +48,17 @@
           <p class="m-0 mb-2">Accessori</p>
         </div>
       </aside>
-
       <section class="col-sm-12 col-lg-9">
         <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
         <h2 class="fs-3 fw-bold mb-4">Prodotti in evidenza<span class="badge bg-danger fs-6 p-2 ms-2">-30%</span></h2>
-        <div class="row">
+          <div id="filtri" class="mb-4">
+      <button type="button" class="btn btn-outline-primary me-2 mb-2 active" data-categoria="tutti">Tutti</button>
+      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="scarpe">Scarpe</button>
+      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="abbigliamento">Abbigliamento</button>
+      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="accessori">Accessori</button>
+      <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="musica">Musica</button>
+    </div>
+        <div id="contenitore-prodotti" class="row"><!--popolato da JS -->
         </div>
       </section>
 

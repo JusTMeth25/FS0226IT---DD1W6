@@ -180,3 +180,15 @@ function renderProdotti(lista) {
 
   document.getElementById("contenitore-prodotti").innerHTML;
 }
+
+const filtri = document.getElementById("filtri");
+filtri.addEventListener("click", function (event) {
+  const bottone = event.target.closest("[data-categoria]");
+  if (!bottone) {
+    return; // se non c'è nessun bottone, esco
+  }
+  filtri.querySelectorAll(".btn").forEach((b) => b.classList.remove("active"));
+  bottone.classList.add("active");
+});
+
+renderProdotti(prodotti);
